@@ -52,17 +52,19 @@ def install_toolbox():
         os.system("mkdir toolbox")
         os.chdir("toolbox")
         fetch_file("https://raw.githubusercontent.com/1ventorusdev/toolbox/main/toolbox/toolbox_win.py", "toolbox_win.py")
+        fetch_file("https://raw.githubusercontent.com/1ventorusdev/toolbox/main/toolbox/toolbox_maj.py", "toolbox_maj.py")
+        fetch_file("https://raw.githubusercontent.com/1ventorusdev/toolbox/main/toolbox/save_config.txt", "save_config.txt")
     
     elif system == "Linux":
         fetch_file("https://raw.githubusercontent.com/1ventorusdev/toolbox/main/toolbox/toolbox_linux.py", "toolbox_linux.py")
+        fetch_file("https://raw.githubusercontent.com/1ventorusdev/toolbox/main/toolbox/toolbox_maj.py", "toolbox_maj.py")
+        fetch_file("https://raw.githubusercontent.com/1ventorusdev/toolbox/main/toolbox/save_config.txt", "save_config.txt")
     
     else:
         print("Système non pris en charge. recommencez lorsque votre systeme sera pris en charge")
         return
 
 def install_requierment():
-    fetch_file("https://raw.githubusercontent.com/1ventorusdev/toolbox/main/toolbox/toolbox_maj.py", "toolbox_maj.py")
-    fetch_file("https://raw.githubusercontent.com/1ventorusdev/toolbox/main/toolbox/save_config.txt", "save_config.txt")
     os.system("pip install colorama")
     
 def uninstall():
